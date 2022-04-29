@@ -55,7 +55,7 @@ for (let i = 0; i < category.length; i++) {
 
   // リストの開閉
   let btn = document.getElementById(category[i] + "-btn");// input要素
-  btn.addEventListener("change", (e) => {
+  btn.addEventListener("change", e => {
     let target = e.currentTarget;
     let label = target.closest("label");
     let span = label.querySelector("span");
@@ -82,7 +82,7 @@ for (let i = 0; i < category.length; i++) {
 
 // 選択した動画を表示
 let selectMovie = document.querySelectorAll("li");
-selectMovie.forEach(m => m.addEventListener("click", (e) => {
+selectMovie.forEach(m => m.addEventListener("click", e => {
   let target = e.currentTarget;
   let id = target.dataset.id;
   movieAreaRendering(id);
